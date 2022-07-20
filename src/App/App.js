@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getReservations } from "../ApiCalls";
+import ReservationsContainer from "../Components/ReservationsContainer";
 import "./App.css";
 
 class App extends Component {
@@ -43,18 +44,7 @@ class App extends Component {
       <div className="App">
         <h1 className="app-title">Turing Cafe Reservations</h1>
         <div className="reservation-form"></div>
-        <section className="reservations-container">
-          {this.state.reservations.map((reservation) => {
-            return (
-              <div key={reservation.id} className="reservation-card">
-                <h2>{reservation.name}</h2>
-                <h2> {reservation.date} </h2>
-                <h2> {reservation.time} </h2>
-                <h2> {reservation.number} </h2>
-              </div>
-            );
-          })}
-        </section>
+        <ReservationsContainer reservation={this.state.reservations} />
       </div>
     );
   }
