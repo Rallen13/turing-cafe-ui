@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+import reservations from "../fixtures/reservations.json";
+
+const baseURL = "http://localhost:3001/api/v1/reservations";
+
+Cypress.Commands.add("stubReservations", () => {
+  cy.intercept(baseURL, reservations).visit("http://localhost:3000/");
+});

@@ -39,7 +39,7 @@ class App extends Component {
         {!this.state.reservations.length && (
           <h2>No reservations yet -- add some!</h2>
         )}
-        <div className="reservation-form">
+        <div>
           <Form addReservation={this.addReservation} />
         </div>
         <ReservationsContainer
