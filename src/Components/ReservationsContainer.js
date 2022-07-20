@@ -2,12 +2,12 @@ import React from "react";
 import ReservationCard from "./ReservationCard";
 import "./ReservationsContainer.css";
 
-const ReservationsContainer = ({ reservations }) => {
+const ReservationsContainer = ({ reservations, deleteReservation }) => {
   return (
     <section className="reservations-container">
       {reservations.map((reservation) => {
         return (
-          <ReservationCard key={reservation.id} reservation={reservation} />
+          <ReservationCard key={reservation.id} reservation={reservation} deleteReservation={deleteReservation} />
         );
       })}
     </section>
