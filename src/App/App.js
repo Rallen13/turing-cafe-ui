@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getReservations } from "../ApiCalls";
+import Form from "../Components/Form";
 import ReservationsContainer from "../Components/ReservationsContainer";
 import "./App.css";
 
@@ -24,7 +25,9 @@ class App extends Component {
         {!this.state.reservations.length && (
           <h2>No reservations yet -- add some!</h2>
         )}
-        <div className="reservation-form"></div>
+        <div className="reservation-form">
+          <Form />
+        </div>
         <ReservationsContainer reservations={this.state.reservations} />
       </div>
     );
