@@ -1,7 +1,10 @@
 .reservation-card {
-  text-align: center;
-  width: 20rem;
-  background-color: #ffffff;
-  padding: 2rem;
+  box-sizing: border-box;
+  border: 3px solid teal;
+  width: 15rem;
+  padding: 10px;
+  background-color: white;
+  margin: 2rem;
   filter: drop-shadow(0 0 0.5rem #cccccc);
 }
+
