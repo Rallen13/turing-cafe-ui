@@ -12,6 +12,10 @@ class Form extends Component {
     };
   }
 
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
   render() {
     return (
       <form>
@@ -20,6 +24,7 @@ class Form extends Component {
           placeholder="Name"
           name="name"
           value={this.state.name}
+          onChange={(event) => this.handleChange(event)}
         />
 
         <input
@@ -27,6 +32,7 @@ class Form extends Component {
           placeholder="Date"
           name="date"
           value={this.state.date}
+          onChange={(event) => this.handleChange(event)}
         />
 
         <input
@@ -34,6 +40,7 @@ class Form extends Component {
           placeholder="Time"
           name="time"
           value={this.state.time}
+          onChange={(event) => this.handleChange(event)}
         />
 
         <input
@@ -41,6 +48,7 @@ class Form extends Component {
           placeholder="Number"
           name="number"
           value={this.state.numner}
+          onChange={(event) => this.handleChange(event)}
         />
         <button>Make Reservation</button>
       </form>
