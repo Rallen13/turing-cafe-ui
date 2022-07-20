@@ -1,0 +1,7 @@
+.reservation-card {
+  text-align: center;
+  width: 20rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  filter: drop-shadow(0 0 0.5rem #cccccc);
+}

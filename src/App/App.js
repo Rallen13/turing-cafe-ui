@@ -44,7 +44,7 @@ class App extends Component {
       <div className="App">
         <h1 className="app-title">Turing Cafe Reservations</h1>
         <div className="reservation-form"></div>
-        <ReservationsContainer reservation={this.state.reservations} />
+        <ReservationsContainer reservations={this.state.reservations} />
       </div>
     );
   }
