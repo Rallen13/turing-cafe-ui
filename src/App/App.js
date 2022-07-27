@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getReservations } from "../ApiCalls";
+import { getReservations, postReservation, deleteReservation } from "../ApiCalls";
 import Form from "../Components/Form";
 import ReservationsContainer from "../Components/ReservationsContainer";
 import "./App.css";
@@ -18,18 +18,20 @@ class App extends Component {
     });
   }
 
-  addReservation = (newReservation) => {
-    this.setState({
-      reservations: [...this.state.reservations, newReservation],
-    });
+  addReservation = async (newReservation) => {
+    await postReservation(newReservation)
+    
+    await getReservations().then((data) => {
+      this.setState({ reservations: data });
+    })
   };
 
-  deleteReservation = (id) => {
-    const filteredReservations = this.state.reservations.filter(
-      (reservation) => reservation.id !== id
-    );
-
-    this.setState({ reservations: filteredReservations });
+  removeReservation = async (id) => {
+    await deleteReservation(id)
+    
+    await getReservations().then((data) => {
+      this.setState({ reservations: data });
+    })
   };
 
   render() {
@@ -44,7 +46,7 @@ class App extends Component {
         </div>
         <ReservationsContainer
           reservations={this.state.reservations}
-          deleteReservation={this.deleteReservation}
+          removeReservation={this.removeReservation}
         />
       </div>
     );
