@@ -16,7 +16,10 @@
     "cypress": "./node_modules/.bin/cypress open"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "plugin:cypress/recommended",
+      "react-app"
+    ]
   },
   "browserslist": {
     "production": [
@@ -31,7 +34,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^6.4.0",
+    "cypress": "^10.4.0",
     "fsevents": "^1.2.13",
     "jest-environment-jsdom-sixteen": "^1.0.3"
   }
