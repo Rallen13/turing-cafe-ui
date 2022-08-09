@@ -59,20 +59,24 @@ class Form extends Component {
           onChange={(event) => this.handleChange(event)}
           data-cy="input-time"
         />
-
-        <input
-          type="text"
-          placeholder="Number"
-          name="number"
-          value={this.state.numner}
+        <select name="number"
+          value={this.state.number}
           onChange={(event) => this.handleChange(event)}
-          data-cy="input-number"
-        />
+          data-cy="input-number">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
         <button
           onClick={(event) => {
             this.submitReservation(event);
           }}
-          data-cy='form-button'
+          data-cy="form-button"
         >
           Make Reservation
         </button>

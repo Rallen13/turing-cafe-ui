@@ -25,14 +25,14 @@ describe("Reservations Page", () => {
     cy.dataCy("input-name").type("Rachel").should("have.value", "Rachel");
     cy.dataCy("input-date").type("4/5").should("have.value", "4/5");
     cy.dataCy("input-time").type("7:00").should("have.value", "7:00");
-    cy.dataCy("input-number").type("7").should("have.value", "7");
+    cy.dataCy("input-number").select("7").should("have.value", "7");
   });
 
   it("should be able to submit a completed form", () => {
     cy.dataCy("input-name").type("Rachel").should("have.value", "Rachel");
     cy.dataCy("input-date").type("4/5").should("have.value", "4/5");
     cy.dataCy("input-time").type("7:00").should("have.value", "7:00");
-    cy.dataCy("input-number").type("7").should("have.value", "7");
+    cy.dataCy("input-number").select("7").should("have.value", "7");
     cy.intercept("POST", "http://localhost:3001/api/v1/reservations", {
       fixture: "newReservation",
     });
@@ -50,7 +50,7 @@ describe("Reservations Page", () => {
     cy.dataCy("input-name").type("Rachel").should("have.value", "Rachel");
     cy.dataCy("input-date").type("4/5").should("have.value", "4/5");
     cy.dataCy("input-time").type("7:00").should("have.value", "7:00");
-    cy.dataCy("input-number").type("7").should("have.value", "7");
+    cy.dataCy("input-number").select("7").should("have.value", "7");
     cy.intercept("POST", "http://localhost:3001/api/v1/reservations", {
       fixture: "newReservation",
     });

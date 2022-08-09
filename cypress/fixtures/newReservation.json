@@ -1,7 +1,9 @@
-[{
-  "id": 4,
-  "name": "Rachel",
-  "date": "4/5",
-  "time": "7:00",
-  "number": 7
-  }]
+[
+  {
+    "id": 4,
+    "name": "Rachel",
+    "date": "4/5",
+    "time": "7:00",
+    "number": 7
+  }
+]

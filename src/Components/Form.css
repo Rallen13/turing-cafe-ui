@@ -2,7 +2,7 @@ form {
   margin: auto;
 }
 
-input, button {
+input, select, button {
   margin: 5px;
   width: 30%;
   border: 2px solid black;
